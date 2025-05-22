@@ -1,7 +1,9 @@
 import { Box, Input, Button, VStack, Field } from "@chakra-ui/react";
-import { Toaster, toaster } from "../components/ui/toaster"
+import { Toaster, toaster } from "../components/ui/toaster";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { Text } from "@chakra-ui/react";
+import { HeaderLogo } from "../components/layout/HeaderLogo";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -26,41 +28,49 @@ export default function Login() {
     localStorage.setItem("currentUser", JSON.stringify(user));
 
     toaster.create({
-        title: "로그인 성공",
-        description: `${user.nickname}님 환영합니다.`,
-        type: "success",
-        duration: 5000,
-    })
-    navigate("/home")
+      title: "로그인 성공",
+      description: `${user.nickname}님 환영합니다.`,
+      type: "success",
+      duration: 3000,
+    });
+    navigate("/home");
   };
 
-  return(
+  return (
     <Box maxW={"md"} mx={"auto"} mt={20}>
-        <VStack gap={4}>
-            <Field.Root>
-                <Field.Label>아이디</Field.Label>
-                <Input
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="아이디"
-                />
-            </Field.Root>
-            <Field.Root>
-                <Field.Label>비밀번호</Field.Label>
-                <Input
-                    value={password}
-                    type="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="비밀번호 입력"
-                />
-            </Field.Root>
-            <Button colorPalette={"blue"} w={"full"} onClick={handleLogin}>
-                로그인
-            </Button>
-            {/* <Button colorPalette={"blue.500"} w={"full"} onClick={}>
+      <HeaderLogo />
+      <VStack gap={4}>
+        <Field.Root>
+          <Field.Label>아이디</Field.Label>
+          <Input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="아이디"
+          />
+        </Field.Root>
+        <Field.Root>
+          <Field.Label>비밀번호</Field.Label>
+          <Input
+            value={password}
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="비밀번호 입력"
+          />
+        </Field.Root>
+        <Button colorPalette={"blue"} w={"full"} onClick={handleLogin}>
+          로그인
+        </Button>
+        <Box textAlign="center" mt={4}>
+          <Text fontSize="sm">
+            아직 계정이 없으신가요?{" "}
+            <Link to="/register">
+              <Button variant={"ghost"} colorPalette="blue" size="sm">
                 회원가입
-            </Button> */}
-        </VStack>
+              </Button>
+            </Link>
+          </Text>
+        </Box>
+      </VStack>
     </Box>
-  )
+  );
 }
