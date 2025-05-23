@@ -69,7 +69,7 @@ export default function Register() {
     localStorage.setItem("users", JSON.stringify([...existing, newUser]));
 
     toaster.create({
-      title: "회원가입 완료",
+      title: "회원가입 성공",
       description: `${nickname}님 환영합니다.`,
       type: "success",
       duration: 4000,

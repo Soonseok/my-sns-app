@@ -1,16 +1,12 @@
-import { Box, Flex } from "@chakra-ui/react"
-import Header from "./Header"
-import Footer from "./Footer"
-import type { ReactNode } from "react"
+import { Box } from "@chakra-ui/react"
+import { Outlet } from "react-router-dom"
+import BottomNavBar from "./BottomNavBar"
 
-export default function AppLayout({ children }: { children: ReactNode }) {
+export default function AppLayout() {
   return (
-    <Flex direction="column" minH="100vh">
-      <Header />
-      <Box as="main" flex="1" px={4} py={6}>
-        {children}
-      </Box>
-      <Footer />
-    </Flex>
+    <Box minH="100vh" pb="60px"> {/* footer 공간 확보 */}
+      <Outlet />
+      <BottomNavBar />
+    </Box>
   )
 }
