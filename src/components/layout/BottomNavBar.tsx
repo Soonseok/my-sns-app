@@ -15,7 +15,7 @@ export default function BottomNavBar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleClickHome = () => {
     if (location.pathname === "/home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -38,7 +38,7 @@ export default function BottomNavBar() {
     >
       <HStack justify="space-around">
         <Link to="/home">
-          <IconButton aria-label="Home" variant="ghost" onClick={handleClick}/>
+          <IconButton aria-label="Home" variant="ghost" onClick={handleClickHome}/>
           <HomeIcon size={32} />
         </Link>
 
