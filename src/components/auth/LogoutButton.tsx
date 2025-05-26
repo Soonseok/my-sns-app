@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react"
-import { Toaster, toaster } from "../ui/toaster"
+import { toaster } from "../ui/toaster"
 import { useNavigate } from "react-router-dom"
 
 export default function LogoutButton() {

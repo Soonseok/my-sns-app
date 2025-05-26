@@ -1,5 +1,5 @@
 import { Box, Input, Button, VStack, Field } from "@chakra-ui/react";
-import { Toaster, toaster } from "../ui/toaster"
+import { toaster } from "../ui/toaster"
 import { useState } from "react";
 
 interface Props {

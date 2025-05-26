@@ -10,7 +10,7 @@ import {
   Field,
   Fieldset,
 } from "@chakra-ui/react";
-import { Toaster, toaster } from "../components/ui/toaster";
+import { toaster } from "../components/ui/toaster";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { HeaderLogo } from "../components/layout/HeaderLogo"

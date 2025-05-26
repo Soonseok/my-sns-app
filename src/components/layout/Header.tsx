@@ -1,5 +1,8 @@
-import { Flex, Text, Spacer, Box } from "@chakra-ui/react"
-import LogoutButton from "../auth/LogoutButton"
+import { Flex, Spacer, Box } from "@chakra-ui/react";
+import LogoutButton from "../auth/LogoutButton";
+import { ColorModeButton } from "../ui/color-mode";
+import { Center } from "@chakra-ui/react";
+import { HeaderLogoHome } from "./HeaderLogo";
 
 export default function Header() {
   return (
@@ -7,18 +10,18 @@ export default function Header() {
       as="header"
       px={4}
       py={3}
-      bg="gray.100"
       borderBottom="1px solid"
       borderColor="gray.200"
       align="center"
     >
-      <Text fontWeight="bold" fontSize="xl">
-        SNS 연습앱
-      </Text>
+      <HeaderLogoHome />
       <Spacer />
-      <Box>
+      <Box px={3}>
         <LogoutButton />
       </Box>
+      <Center py={4}>
+        <ColorModeButton />
+      </Center>
     </Flex>
-  )
+  );
 }

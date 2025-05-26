@@ -17,3 +17,19 @@ export const HeaderLogo = () => {
     </Center>
   )
 }
+
+export const HeaderLogoHome = () => {
+  const logoSrc = useColorModeValue("/images/earth_black.png", "/images/earth_white.png")
+
+  return (
+    <Center mt={0} mb={0}>
+      <Link to="/home">
+        <Image
+          src={logoSrc}
+          height="40px"
+          objectFit="contain"
+        />
+      </Link>
+    </Center>
+  )
+}

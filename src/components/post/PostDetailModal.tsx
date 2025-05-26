@@ -85,14 +85,14 @@ export default function PostDetailModal({
           <Portal>
             <Dialog.Backdrop />
             <Dialog.Positioner>
-              <Dialog.Content maxW="xl" p={2} borderRadius="lg">
+              <Dialog.Content maxW="90vw" minW="auto" p={2} borderRadius="lg" alignItems={"center"}>
                 <Dialog.CloseTrigger asChild>
                   <CloseButton position="absolute" top={2} right={2} />
                 </Dialog.CloseTrigger>
                 <Box>
                   <Image
                     src={previewImage}
-                    w="100%"
+                    w="auto"
                     h="auto"
                     objectFit="contain"
                     alt="preview"

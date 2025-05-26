@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    DirectoryIndex index.html
+    RewriteEngine On
+    RewriteCond %{THE_REQUEST} /index\\.html
+    RewriteRule ^index\\.html$ / [R=301,L]
+</IfModule>
