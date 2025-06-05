@@ -1,3 +1,24 @@
+# 할일
+## 게시글
++ 게시글에 동영상 첨부 기능 추가
++ 게시글에 Latex, MarkDown 추가
++ 게시글 카테고리 추가(tag로 대체 가능)
++ 게시글 댓글 추가
+
+## 검색
++ 게시글 내용, 태그로 검색
++ 태그로 그룹화
++ 날짜 별, 기간 별 정렬
++ 내가 쓴 글에 대해서도 정렬 및 검색 가능해야
++ 검색 결과 나오기 전까지는 스피너 보여주기
+
+## 
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
